@@ -1,16 +1,6 @@
 {% extends 'blog/base.html' %}
-{% load static %}
 
 {% block content %}
+index
 
-    {% for post in posts %}
-        <div class="card" style="width: 18rem;">
-            <img src="{% static 'images/where_the_journey_begins.jpeg' %}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">{{ post.title| capfirst }}</h5>
-                <p class="card-text">{{ post.description|slice:":50" }}</p>
-                <a href="{% url 'post_detail' post.pk %}" class="btn btn-primary w-100">Read Blog Post</a>
-            </div>
-        </div>
-    {% endfor %}
 {% endblock content %}
