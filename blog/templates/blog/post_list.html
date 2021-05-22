@@ -2,10 +2,11 @@
 {% load static %}
 
 {% block content %}
-
+<div class="row min-vh-100">
     {% for post in posts %}
-        <div class="card" style="width: 18rem;">
-            <img src="{{ post.post_card_image.url }}/" class="card-img-top" alt="/{{ post.post_card_image.url }}">
+
+        <div class="card col-6 col-md-4  m-5" style="width: 18rem;">
+            <img width="262" height="175" src="{{ post.post_card_image.url }}/" class="card-img-top" alt="/{{ post.post_card_image.url }}">
             <div class="card-body">
                 <h5 class="card-title">{{ post.title| capfirst }}</h5>
                 <p class="card-text">{{ post.description|slice:":50" }}...</p>
@@ -13,5 +14,7 @@
             </div>
         </div>
     {% endfor %}
+            </div>
+
 {% endblock content %}
 
