@@ -9,7 +9,7 @@
             <img width="262" height="175" src="{{ post.post_card_image.url }}/" class="card-img-top" alt="/{{ post.post_card_image.url }}">
             <div class="card-body">
                 <h5 class="card-title">{{ post.title| capfirst }}</h5>
-                <p class="card-text">{{ post.description|slice:":50" }}...</p>
+                <p class="card-text">{{ post.description|truncatewords:30|safe}}...</p>
                 <a href="{% url 'post_detail' post.pk %}" class="btn btn-primary w-100">Read Blog Post</a>
             </div>
         </div>
@@ -17,4 +17,4 @@
             </div>
 
 {% endblock content %}
-
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, omnis?

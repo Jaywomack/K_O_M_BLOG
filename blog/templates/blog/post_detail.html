@@ -3,5 +3,5 @@
 <h1>{{ post.title }}</h1>
     <h3>{{ post.author }}</h3>
     <h5>{{ post.post_date }}</h5>
-    <p>{{ post.description }}</p>
+   <div> <pre>{{ post.description|safe }}</pre></div>
 {% endblock content %}
